@@ -50,4 +50,5 @@ FROM kitty_builder
 COPY --from=tmux_builder /opt/tmux/bin/tmux /usr/local/bin/tmux
 COPY --from=tmux_builder /opt/tmux/share/man/man1/tmux.1 /usr/local/share/man/man1/tmux.1
 ADD colortest.sh /usr/local/bin/colortest.sh
-ENTRYPOINT ["/root/.local/kitty.app/bin/kitty", "-o", "font_size=22", "tmux", "-f", "/dev/null", "new-session", "colortest.sh"]
+ADD tmux.conf /root/.tmux.conf
+ENTRYPOINT ["/root/.local/kitty.app/bin/kitty", "-o", "font_size=22", "tmux", "-f", "/root/.tmux.conf", "new-session", "colortest.sh"]

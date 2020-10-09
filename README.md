@@ -1,3 +1,11 @@
+From what I can tell, the `tmux.conf` change fixes the issue on tmux-3.2-rc2, i.e.:
+
+    set-option -as terminal-features ',xterm-kitty:RGB'
+
+... is all it takes to fix it.
+
+---
+
 This repository contains a set of files that should help reproduce a problem
 I've encountered using kitty and tmux 3.2-rc2: truecolor support fails to work
 on 3.2-rc2 despite it working on 3.1b.
