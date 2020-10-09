@@ -4,6 +4,8 @@ From what I can tell, the `tmux.conf` change fixes the issue on tmux-3.2-rc2, i.
 
 ... is all it takes to fix it.
 
+Unfortunately that setting is _not_ available on earlier versions.
+
 ---
 
 This repository contains a set of files that should help reproduce a problem
